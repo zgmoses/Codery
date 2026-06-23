@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codery - Learning Path</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/navbar-footer.css" />
+    <link rel="stylesheet" href="../css/learning-path.css" />
+  </head>
+  <body>
+    <header class="cd-navbar">
+      <a href="beranda.html" class="cd-logo">
+        <div class="cd-logo-mark"><span>&lt;/&gt;</span></div>
+        <div class="cd-logo-text"><strong>Codery</strong></div>
+      </a>
+      <button class="cd-hamburger" id="hamburgerBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="cd-nav-menu" id="navMenu">
+        <a href="beranda.html">Beranda</a>
+        <a href="courses.html">Kelas</a>
+        <a href="learning-path.html" class="active">Learning Path</a>
+        <a href="mentors.html">Mentor</a>
+        <a href="about.html">Tentang</a>
+      </nav>
+      <div class="cd-nav-actions" id="navActions">
+        <a href="register.html" class="cd-register-btn">Daftar/Masuk</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="cd-lp-hero">
+        <h1>Pilih Learning Path yang Sesuai Tujuanmu</h1>
+        <p>
+          Ikuti jalur terstruktur dari dasar hingga project nyata yang siap
+          masuk portfolio.
+        </p>
+        <div class="cd-lp-hero-stats">
+          <div><strong>5+</strong> Jalur</div>
+          <div><strong>2000+</strong> Learner</div>
+          <div><strong>85%</strong> Selesai</div>
+        </div>
+      </section>
+
+      <!-- Filter Path -->
+      <section class="cd-lp-filter" id="lpFilter">
+        <button class="cd-lp-chip active" data-filter="semua">Semua</button>
+        <button class="cd-lp-chip" data-filter="Frontend">💻 Frontend</button>
+        <button class="cd-lp-chip" data-filter="Data">📊 Data</button>
+        <button class="cd-lp-chip" data-filter="Cyber">🛡️ Cyber</button>
+        <button class="cd-lp-chip" data-filter="AI">🤖 AI</button>
+        <button class="cd-lp-chip" data-filter="DevOps">⚙️ DevOps</button>
+      </section>
+
+      <!-- Grid Path -->
+      <section class="cd-lp-grid" id="lpGrid">
+        <!-- Path 1 -->
+        <div class="cd-lp-card" data-category="Frontend">
+          <div class="cd-lp-card-top">
+            <div class="cd-lp-icon">💻</div>
+            <div>
+              <h3>Frontend Developer</h3>
+              <p>Bangun website interaktif dengan HTML, CSS, JS, dan React</p>
+            </div>
+          </div>
+          <div class="cd-lp-roadmap">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Portfolio Project</span>
+          </div>
+          <div class="cd-lp-meta">
+            <span>📚 4 Kelas</span>
+            <span>⏳ 12 Minggu</span>
+            <span>📊 850+ Learner</span>
+          </div>
+          <a href="#" class="cd-lp-btn">Lihat Detail →</a>
+        </div>
+        <!-- Path 2 -->
+        <div class="cd-lp-card" data-category="Data">
+          <div class="cd-lp-card-top">
+            <div class="cd-lp-icon">📊</div>
+            <div>
+              <h3>Data Analyst</h3>
+              <p>
+                Kuasai SQL, Python, dan visualisasi data untuk pengambilan
+                keputusan
+              </p>
+            </div>
+          </div>
+          <div class="cd-lp-roadmap">
+            <span>Excel</span>
+            <span>SQL</span>
+            <span>Python</span>
+            <span>Dashboard</span>
+            <span>Data Storytelling</span>
+          </div>
+          <div class="cd-lp-meta">
+            <span>📚 4 Kelas</span>
+            <span>⏳ 10 Minggu</span>
+            <span>📊 720+ Learner</span>
+          </div>
+          <a href="#" class="cd-lp-btn">Lihat Detail →</a>
+        </div>
+        <!-- Path 3 -->
+        <div class="cd-lp-card" data-category="Cyber">
+          <div class="cd-lp-card-top">
+            <div class="cd-lp-icon">🛡️</div>
+            <div>
+              <h3>Cyber Security</h3>
+              <p>
+                Pelajari ethical hacking, network security, dan penetration
+                testing
+              </p>
+            </div>
+          </div>
+          <div class="cd-lp-roadmap">
+            <span>Networking</span>
+            <span>Linux</span>
+            <span>Web Security</span>
+            <span>Pentesting</span>
+            <span>Bug Bounty</span>
+          </div>
+          <div class="cd-lp-meta">
+            <span>📚 5 Kelas</span>
+            <span>⏳ 14 Minggu</span>
+            <span>📊 410+ Learner</span>
+          </div>
+          <a href="#" class="cd-lp-btn">Lihat Detail →</a>
+        </div>
+        <!-- Path 4 -->
+        <div class="cd-lp-card" data-category="AI">
+          <div class="cd-lp-card-top">
+            <div class="cd-lp-icon">🤖</div>
+            <div>
+              <h3>AI Engineer</h3>
+              <p>Mulai dari Python hingga membangun model machine learning</p>
+            </div>
+          </div>
+          <div class="cd-lp-roadmap">
+            <span>Python</span>
+            <span>Data Science</span>
+            <span>Machine Learning</span>
+            <span>Deep Learning</span>
+            <span>AI Project</span>
+          </div>
+          <div class="cd-lp-meta">
+            <span>📚 5 Kelas</span>
+            <span>⏳ 16 Minggu</span>
+            <span>📊 500+ Learner</span>
+          </div>
+          <a href="#" class="cd-lp-btn">Lihat Detail →</a>
+        </div>
+        <!-- Path 5 -->
+        <div class="cd-lp-card" data-category="DevOps">
+          <div class="cd-lp-card-top">
+            <div class="cd-lp-icon">⚙️</div>
+            <div>
+              <h3>DevOps Engineer</h3>
+              <p>Otomatisasi deployment dengan Docker, Kubernetes, dan CI/CD</p>
+            </div>
+          </div>
+          <div class="cd-lp-roadmap">
+            <span>Linux</span>
+            <span>Docker</span>
+            <span>Kubernetes</span>
+            <span>CI/CD</span>
+            <span>Cloud</span>
+          </div>
+          <div class="cd-lp-meta">
+            <span>📚 4 Kelas</span>
+            <span>⏳ 12 Minggu</span>
+            <span>📊 320+ Learner</span>
+          </div>
+          <a href="#" class="cd-lp-btn">Lihat Detail →</a>
+        </div>
+      </section>
+
+      <!-- Empty State -->
+      <div class="cd-lp-empty" id="lpEmpty" style="display: none">
+        <p>📭 Tidak ada learning path untuk kategori ini.</p>
+        <button id="lpResetFilter">Lihat Semua</button>
+      </div>
+
+      <!-- CTA akhir -->
+      <section class="cd-final-cta">
+        <div class="cd-final-cta-content">
+          <h2>Siap Mulai Jalur Belajarmu?</h2>
+          <p>
+            Tentukan path, ikuti kelas, dan bangun portfolio nyata bersama
+            mentor.
+          </p>
+          <div class="cd-final-actions">
+            <a href="register.html" class="cd-final-btn-primary"
+              >Mulai Sekarang</a
+            >
+            <a href="courses.html" class="cd-final-btn-secondary"
+              >Lihat Kelas</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="cd-footer">
+      <div class="cd-footer-top">
+        <div class="cd-footer-brand">
+          <h3>Codery</h3>
+          <p>
+            Platform belajar berbasis project yang membantu learner membangun
+            skill, portfolio, dan karier teknologi.
+          </p>
+        </div>
+        <div class="cd-footer-links">
+          <h4>Menu</h4>
+          <a href="beranda.html">Beranda</a>
+          <a href="courses.html">Kelas</a>
+          <a href="learning-path.html">Learning Path</a>
+          <a href="mentors.html">Mentor</a>
+        </div>
+        <div class="cd-footer-links">
+          <h4>Program</h4>
+          <a href="#">Frontend</a>
+          <a href="#">Data Analyst</a>
+          <a href="#">Cyber Security</a>
+        </div>
+        <div class="cd-footer-links">
+          <h4>Kontak</h4>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Email</a>
+        </div>
+      </div>
+      <div class="cd-footer-bottom">© 2026 Codery. All rights reserved.</div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

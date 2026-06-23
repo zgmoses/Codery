@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codery - Daftar Kelas</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/navbar-footer.css" />
+    <link rel="stylesheet" href="../css/courses.css" />
+  </head>
+  <body>
+    <header class="cd-navbar">
+      <a href="beranda.html" class="cd-logo">
+        <div class="cd-logo-mark"><span>&lt;/&gt;</span></div>
+        <div class="cd-logo-text"><strong>Codery</strong></div>
+      </a>
+      <nav class="cd-nav-menu">
+        <a href="beranda.html">Beranda</a>
+        <a href="courses.html" class="active">Kelas</a>
+        <a href="learning-path.html">Learning Path</a>
+        <a href="mentors.html">Mentor</a>
+        <a href="about.html">Tentang</a>
+      </nav>
+      <div class="cd-nav-actions">
+        <a href="register.html" class="cd-register-btn">Daftar/Masuk</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="cd-courses-hero">
+        <h1>Bangun Skill Lewat Kelas yang Terarah</h1>
+        <p>Pilih kelas sesuai minatmu, dari dasar sampai project nyata.</p>
+
+        <!-- Search Box -->
+        <div class="cd-search-box">
+          <span class="cd-search-icon">🔍</span>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari kelas... (contoh: React, Python, SQL)"
+            autocomplete="off"
+          />
+          <button
+            id="searchClear"
+            class="cd-search-clear"
+            style="display: none"
+          >
+            ✕
+          </button>
+        </div>
+      </section>
+
+      <!-- Filter & Result Bar -->
+      <section class="cd-filter-bar">
+        <div class="cd-filter-chips">
+          <button class="cd-filter-chip active" data-filter="semua">
+            Semua
+          </button>
+          <button class="cd-filter-chip" data-filter="Frontend">
+            💻 Frontend
+          </button>
+          <button class="cd-filter-chip" data-filter="Data">📊 Data</button>
+          <button class="cd-filter-chip" data-filter="Cyber">🛡️ Cyber</button>
+          <button class="cd-filter-chip" data-filter="AI">🤖 AI</button>
+          <button class="cd-filter-chip" data-filter="DevOps">⚙️ DevOps</button>
+        </div>
+      </section>
+
+      <!-- Grid Kelas -->
+      <section class="cd-courses-grid-section" id="coursesGrid">
+        <!-- Card 1 -->
+        <div
+          class="cd-course-card"
+          data-category="Frontend"
+          data-title="HTML & CSS Fundamental"
+        >
+          <div class="cd-course-badge">Frontend</div>
+          <h3>HTML & CSS Fundamental</h3>
+          <p>Bangun struktur dan tampilan website profesional dari nol.</p>
+          <div class="cd-course-meta">
+            <span>📚 12 Modul</span>
+            <span>🕒 6 Minggu</span>
+            <span>⭐ 4.8</span>
+          </div>
+          <div class="cd-course-footer">
+            <span class="cd-course-price">Gratis</span>
+            <a href="course-detail.html?course=html-css"> Lihat Detail</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="cd-course-card"
+          data-category="Frontend"
+          data-title="JavaScript Modern"
+        >
+          <div class="cd-course-badge">Frontend</div>
+          <h3>JavaScript Modern</h3>
+          <p>Kuasai ES6+, DOM, async/await, dan fundamental JS modern.</p>
+          <div class="cd-course-meta">
+            <span>📚 16 Modul</span>
+            <span>🕒 8 Minggu</span>
+            <span>⭐ 4.9</span>
+          </div>
+          <div class="cd-course-footer">
+            <span class="cd-course-price">Rp 299K</span>
+            <a href="course-detail.html?course=javascript-modern">
+              Lihat Detail
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="cd-course-card"
+          data-category="Frontend"
+          data-title="React.js Masterclass"
+        >
+          <div class="cd-course-badge">Frontend</div>
+          <h3>React.js Masterclass</h3>
+          <p>Belajar React hooks, state management, dan bikin project nyata.</p>
+          <div class="cd-course-meta">
+            <span>📚 20 Modul</span>
+            <span>🕒 10 Minggu</span>
+            <span>⭐ 4.9</span>
+          </div>
+          <div class="cd-course-footer">
+            <span class="cd-course-price">Rp 499K</span>
+            <a href="course-detail.html?course=react-masterclass">
+              Lihat Detail
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="cd-course-card"
+          data-category="Data"
+          data-title="SQL untuk Data Analyst"
+        >
+          <div class="cd-course-badge">Data</div>
+          <h3>SQL untuk Data Analyst</h3>
+          <p>Query, join, agregasi, dan analisis data pakai SQL.</p>
+          <div class="cd-course-meta">
+            <span>📚 10 Modul</span>
+            <span>🕒 4 Minggu</span>
+            <span>⭐ 4.7</span>
+          </div>
+          <div class="cd-course-footer">
+            <span class="cd-course-price">Rp 199K</span>
+            <a href="course-detail.html?course=sql-data-analyst">
+              Lihat Detail
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="cd-course-card"
+          data-category="Data"
+          data-title="Python untuk Data Science"
+        >
+          <div class="cd-course-badge">Data</div>
+          <h3>Python untuk Data Science</h3>
+          <p>Pandas, NumPy, visualisasi, dan dasar machine learning.</p>
+          <div class="cd-course-meta">
+            <span>📚 18 Modul</span>
+            <span>🕒 8 Minggu</span>
+            <span>⭐ 4.8</span>
+          </div>
+          <div class="cd-course-footer">
+            <span class="cd-course-price">Rp 399K</span>
+            <a href="course-detail.html?course=python-data-science">
+              Lihat Detail
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="cd-course-card"
+          data-category="Cyber"
+          data-title="Ethical Hacking Dasar"
+        >
+          <div class="cd-course-badge">Cyber</div>
+          <h3>Ethical Hacking Dasar</h3>
+          <p>Kenali vulnerability, penetration testing, dan keamanan web.</p>
+          <div class="cd-course-meta">
+            <span>📚 14 Modul</span>
+            <span>🕒 8 Minggu</span>
+            <span>⭐ 4.8</span>
+          </div>
+          <div class="cd-course-footer">
+            <span class="cd-course-price">Rp 449K</span>
+            <a href="course-detail.html?course=ethical-hacking">
+              Lihat Detail
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div
+          class="cd-course-card"
+          data-category="AI"
+          data-title="Machine Learning Fundamentals"
+        >
+          <div class="cd-course-badge">AI</div>
+          <h3>Machine Learning Fundamentals</h3>
+          <p>Algoritma ML, model training, evaluasi, dan project nyata.</p>
+          <div class="cd-course-meta">
+            <span>📚 15 Modul</span>
+            <span>🕒 10 Minggu</span>
+            <span>⭐ 4.9</span>
+          </div>
+          <div class="cd-course-footer">
+            <span class="cd-course-price">Rp 599K</span>
+            <a href="course-detail.html?course=machine-learning">
+              Lihat Detail
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div
+          class="cd-course-card"
+          data-category="DevOps"
+          data-title="Docker & Kubernetes"
+        >
+          <div class="cd-course-badge">DevOps</div>
+          <h3>Docker & Kubernetes</h3>
+          <p>Kontainerisasi, orchestration, dan deployment modern.</p>
+          <div class="cd-course-meta">
+            <span>📚 12 Modul</span>
+            <span>🕒 6 Minggu</span>
+            <span>⭐ 4.7</span>
+          </div>
+          <div class="cd-course-footer">
+            <span class="cd-course-price">Rp 499K</span>
+            <a href="course-detail.html?course=docker-kubernetes">
+              Lihat Detail
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div
+          class="cd-course-card"
+          data-category="DevOps"
+          data-title="Git & Deployment Dasar"
+        >
+          <div class="cd-course-badge">DevOps</div>
+          <h3>Git & Deployment Dasar</h3>
+          <p>
+            Pelajari Git, GitHub, workflow project, dan cara deploy website.
+          </p>
+
+          <div class="cd-course-meta">
+            <span>📚 10 Modul</span>
+            <span>🕒 4 Minggu</span>
+            <span>⭐ 4.8</span>
+          </div>
+
+          <div class="cd-course-footer">
+            <span class="cd-course-price">Rp 249K</span>
+            <a href="course-detail.html?course=git-deployment">
+              Lihat Detail
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Empty State (hidden default) -->
+      <div class="cd-empty-state" id="emptyState" style="display: none">
+        <div class="cd-empty-icon">📭</div>
+        <h3>Kelas tidak ditemukan</h3>
+        <p>Coba kata kunci lain atau hapus filter yang sedang aktif.</p>
+        <button id="resetFilterBtn" class="cd-reset-btn">Reset Filter</button>
+      </div>
+
+      <!-- Newsletter CTA -->
+      <section class="cd-newsletter-cta">
+        <div class="cd-newsletter-content">
+          <div class="cd-newsletter-text">
+            <h2>Dapatkan Update Kelas Terbaru</h2>
+            <p>
+              Jadi yang pertama tahu saat ada kelas baru, diskon, dan tips
+              belajar langsung di inbox kamu.
+            </p>
+          </div>
+          <form
+            class="cd-newsletter-form"
+            onsubmit="
+              event.preventDefault();
+              alert('Terima kasih sudah subscribe! 🎉');
+            "
+          >
+            <input type="email" placeholder="Masukkan email kamu" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- CTA Akhir -->
+      <section class="cd-final-cta">
+        <div class="cd-final-cta-content">
+          <h2>Siap Mulai Belajar?</h2>
+          <p>
+            Gabung sekarang dan akses semua kelas untuk bangun skill dan
+            portfolio.
+          </p>
+          <a href="register.html" class="cd-final-btn-primary"
+            >Daftar Sekarang</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="cd-footer">
+      <div class="cd-footer-top">
+        <div class="cd-footer-brand">
+          <h3>Codery</h3>
+          <p>
+            Platform belajar berbasis project yang membantu learner membangun
+            skill, portfolio, dan karier teknologi.
+          </p>
+        </div>
+        <div class="cd-footer-links">
+          <h4>Menu</h4>
+          <a href="beranda.html">Beranda</a>
+          <a href="courses.html">Kelas</a>
+          <a href="learning-path.html">Learning Path</a>
+          <a href="mentors.html">Mentor</a>
+        </div>
+        <div class="cd-footer-links">
+          <h4>Program</h4>
+          <a href="#">Frontend</a>
+          <a href="#">Data Analyst</a>
+          <a href="#">Cyber Security</a>
+        </div>
+        <div class="cd-footer-links">
+          <h4>Kontak</h4>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Email</a>
+        </div>
+      </div>
+      <div class="cd-footer-bottom">© 2026 Codery. All rights reserved.</div>
+    </footer>
+
+    <script>
+      // ========== SEARCH + FILTER SYSTEM ==========
+      const searchInput = document.getElementById("searchInput");
+      const searchClear = document.getElementById("searchClear");
+      const filterChips = document.querySelectorAll(".cd-filter-chip");
+      const courseCards = document.querySelectorAll(".cd-course-card");
+      const emptyState = document.getElementById("emptyState");
+      const coursesGrid = document.getElementById("coursesGrid");
+      const resetFilterBtn = document.getElementById("resetFilterBtn");
+
+      let activeFilter = "semua"; // 'semua', 'Frontend', 'Data', 'Cyber', 'AI', 'DevOps'
+      let searchQuery = "";
+
+      function updateResults() {
+        let visibleCount = 0;
+
+        courseCards.forEach((card) => {
+          const category = card.getAttribute("data-category");
+          const title = card.getAttribute("data-title").toLowerCase();
+          const description = card.querySelector("p").textContent.toLowerCase();
+          const badge = card
+            .querySelector(".cd-course-badge")
+            .textContent.toLowerCase();
+
+          // Cek filter kategori
+          const matchFilter =
+            activeFilter === "semua" || category === activeFilter;
+
+          // Cek search query (cari di judul, deskripsi, badge)
+          const matchSearch =
+            searchQuery === "" ||
+            title.includes(searchQuery) ||
+            description.includes(searchQuery) ||
+            badge.includes(searchQuery);
+
+          if (matchFilter && matchSearch) {
+            card.style.display = "";
+            card.classList.add("cd-visible");
+            card.classList.remove("cd-hidden");
+            visibleCount++;
+          } else {
+            card.style.display = "none";
+            card.classList.remove("cd-visible");
+            card.classList.add("cd-hidden");
+          }
+        });
+
+        // Show/hide empty state
+        if (visibleCount === 0) {
+          emptyState.style.display = "block";
+          coursesGrid.style.display = "none";
+        } else {
+          emptyState.style.display = "none";
+          coursesGrid.style.display = "";
+        }
+
+        // Show/hide clear search button
+        if (searchQuery !== "") {
+          searchClear.style.display = "block";
+        } else {
+          searchClear.style.display = "none";
+        }
+      }
+
+      // Search input event
+      searchInput.addEventListener("input", function (e) {
+        searchQuery = e.target.value.toLowerCase().trim();
+        updateResults();
+      });
+
+      // Clear search
+      searchClear.addEventListener("click", function () {
+        searchInput.value = "";
+        searchQuery = "";
+        updateResults();
+        searchInput.focus();
+      });
+
+      // Filter chips
+      filterChips.forEach((chip) => {
+        chip.addEventListener("click", function () {
+          // Update active state
+          filterChips.forEach((c) => c.classList.remove("active"));
+          this.classList.add("active");
+
+          // Set active filter
+          activeFilter = this.getAttribute("data-filter");
+          updateResults();
+        });
+      });
+
+      // Reset filter button (di empty state)
+      resetFilterBtn.addEventListener("click", function () {
+        // Reset filter ke "semua"
+        activeFilter = "semua";
+        filterChips.forEach((c) => c.classList.remove("active"));
+        const semuaChip = document.querySelector(
+          '.cd-filter-chip[data-filter="semua"]',
+        );
+        if (semuaChip) semuaChip.classList.add("active");
+
+        // Reset search
+        searchInput.value = "";
+        searchQuery = "";
+        searchClear.style.display = "none";
+
+        updateResults();
+      });
+
+      // ========== STAGGERED ANIMATION ON LOAD ==========
+      window.addEventListener("DOMContentLoaded", () => {
+        courseCards.forEach((card, index) => {
+          card.style.animationDelay = `${index * 0.05}s`;
+          card.classList.add("cd-card-animate-in");
+        });
+      });
+    </script>
+  </body>
+</html>

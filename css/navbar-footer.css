@@ -1,0 +1,262 @@
+.cd-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 86px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(248, 251, 255, 0.8);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+
+.cd-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
+.cd-logo-mark {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--primary), var(--purple));
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.25);
+}
+
+.cd-logo-mark span {
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.cd-logo-text strong {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--text);
+  letter-spacing: -1px;
+}
+
+.cd-nav-menu {
+  display: flex;
+  gap: 34px;
+}
+
+.cd-nav-menu {
+  display: flex;
+  gap: 12px;
+}
+
+.cd-nav-menu a {
+  position: relative;
+
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  text-decoration: none;
+  color: var(--text);
+
+  font-weight: 700;
+  font-size: 15px;
+
+  transition: all 0.25s ease;
+}
+.cd-nav-menu a::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.08),
+    rgba(139, 92, 246, 0.08)
+  );
+
+  opacity: 0;
+  transform: scale(0.85);
+
+  transition: all 0.25s ease;
+
+  z-index: -1;
+}
+
+.cd-nav-menu a:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.cd-nav-menu a:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.cd-nav-menu a.active {
+  color: var(--primary);
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.cd-nav-menu a.active::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cd-register-btn {
+  padding: 13px 24px;
+  border-radius: 14px;
+}
+
+.cd-footer {
+  background: var(--dark);
+  color: white;
+  padding: 70px 8% 30px;
+}
+
+.cd-footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.cd-footer-brand h3 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.cd-footer-brand p {
+  color: #cbd5e1;
+  line-height: 1.8;
+  max-width: 380px;
+}
+
+.cd-footer-links h4 {
+  margin-bottom: 18px;
+}
+
+.cd-footer-links a {
+  display: block;
+  margin-bottom: 12px;
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.cd-footer-links a:hover {
+  color: white;
+}
+
+.cd-footer-bottom {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* Hamburger button */
+.cd-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 101;
+}
+
+.cd-hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--text);
+  margin: 6px 0;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.cd-hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.cd-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.cd-hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 1000px) {
+  .cd-hamburger {
+    display: block;
+  }
+
+  .cd-nav-menu,
+  .cd-nav-actions {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 86px;
+    left: 0;
+    right: 0;
+    background: rgba(248, 251, 255, 0.98);
+    backdrop-filter: blur(18px);
+    padding: 20px 8%;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cd-nav-menu.active,
+  .cd-nav-actions.active {
+    display: flex;
+  }
+
+  .cd-nav-actions {
+    top: auto;
+    bottom: -86px; /* sedikit penyesuaian */
+    border-bottom: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .cd-nav-menu a {
+    padding: 12px 0;
+    font-size: 17px;
+  }
+
+  .cd-nav-actions {
+    padding: 16px 8%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cd-nav-menu,
+  .cd-nav-actions {
+    display: none;
+  }
+
+  .cd-footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cd-navbar {
+    height: 74px;
+  }
+
+  .cd-logo-mark {
+    width: 46px;
+    height: 46px;
+  }
+
+  .cd-logo-text strong {
+    font-size: 26px;
+  }
+
+  .cd-footer-top {
+    grid-template-columns: 1fr;
+  }
+}

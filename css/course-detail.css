@@ -1,0 +1,347 @@
+.cd-detail-hero {
+  padding: 90px 8%;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 42px;
+  align-items: stretch;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(37, 99, 235, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(139, 92, 246, 0.12),
+      transparent 32%
+    ),
+    #f8fbff;
+}
+
+.cd-detail-content,
+.cd-detail-card {
+  border: 1px solid var(--border);
+  background: white;
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.08);
+}
+
+.cd-detail-content {
+  padding: 46px;
+  border-radius: 34px;
+}
+
+.cd-detail-category {
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  color: var(--primary);
+  background: rgba(37, 99, 235, 0.1);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.cd-detail-content h1 {
+  max-width: 820px;
+  margin-bottom: 22px;
+  font-size: 58px;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: var(--text);
+}
+
+.cd-detail-content p {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.cd-detail-meta {
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.cd-detail-meta span {
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.cd-detail-card {
+  padding: 32px;
+  border-radius: 30px;
+}
+
+.cd-detail-card p {
+  color: var(--muted);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.cd-detail-card h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+
+.cd-enroll-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 22px;
+  border-radius: 16px;
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary), var(--purple));
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.25);
+  transition: 0.25s ease;
+}
+
+.cd-enroll-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 50px rgba(37, 99, 235, 0.34);
+}
+
+.cd-detail-card-info {
+  display: grid;
+  gap: 14px;
+  margin-top: 26px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.cd-detail-card-info span {
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.cd-detail-section,
+.cd-mentor-area {
+  padding: 100px 8%;
+  background: white;
+}
+
+.cd-learning-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.cd-learning-item {
+  padding: 26px;
+  border-radius: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.06);
+}
+
+.cd-learning-item span {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  color: white;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary), var(--purple));
+}
+
+.cd-learning-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cd-learning-item p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.cd-roadmap-area {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(37, 99, 235, 0.08),
+      transparent 28%
+    ),
+    #f8fbff;
+}
+
+.cd-roadmap-detail {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.cd-roadmap-step {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 20px;
+  align-items: start;
+  padding: 24px;
+  border-radius: 24px;
+  background: white;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.06);
+}
+
+.cd-roadmap-number {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  color: white;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary), var(--purple));
+}
+
+.cd-roadmap-step h3 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.cd-roadmap-step p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.cd-project-area {
+  padding: 100px 8%;
+  background: var(--dark);
+  color: white;
+}
+
+.cd-project-area > div {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cd-project-area span {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #93c5fd;
+  font-weight: 900;
+}
+
+.cd-project-area h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 18px;
+}
+
+.cd-project-area p {
+  color: #cbd5e1;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.cd-mentor-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 34px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 30px;
+  background: white;
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.07);
+}
+
+.cd-mentor-avatar-large {
+  width: 92px;
+  height: 92px;
+  flex: 0 0 92px;
+  display: grid;
+  place-items: center;
+  border-radius: 28px;
+  color: white;
+  font-size: 28px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary), var(--purple));
+}
+
+.cd-mentor-detail h3 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.cd-mentor-detail span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--primary);
+  font-weight: 900;
+}
+
+.cd-mentor-detail p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+  .cd-detail-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .cd-detail-content h1 {
+    font-size: 46px;
+  }
+
+  .cd-learning-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cd-detail-hero {
+    padding: 60px 6%;
+  }
+
+  .cd-detail-content,
+  .cd-detail-card {
+    padding: 26px;
+  }
+
+  .cd-detail-content h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .cd-detail-meta {
+    flex-direction: column;
+  }
+
+  .cd-detail-section,
+  .cd-mentor-area,
+  .cd-project-area {
+    padding: 70px 6%;
+  }
+
+  .cd-roadmap-step {
+    grid-template-columns: 1fr;
+  }
+
+  .cd-mentor-detail {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cd-project-area h2 {
+    font-size: 34px;
+  }
+}
