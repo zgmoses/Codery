@@ -25,14 +25,14 @@
         <a href="mentors.html" class="active">Mentor</a>
         <a href="about.html">Tentang</a>
       </nav>
-      <div class="cd-nav-actions">
+      <div class="cd-nav-actions"id="navActions">
         <a href="register.html" class="cd-register-btn">Daftar/Masuk</a>
       </div>
     </header>
 
     <main>
       <!-- HERO -->
-      <section class="cd-mentor-hero">
+      <section class="cd-mentor-hero" id="mentorHero">
         <h1>Belajar bersama mentor berpengalaman</h1>
         <p>
           Dapatkan arahan, masukan project, dan pengalaman belajar yang lebih
@@ -84,43 +84,81 @@
       </section>
 
       <!-- Semua Mentor -->
-      <section class="cd-mentor-list">
-        <div class="cd-section-header">
-          <h2>Semua Mentor</h2>
+     <section class="cd-mentor-list">
+  <div class="cd-section-header">
+    <h2>Semua Mentor</h2>
 
-          <p>Pilih mentor sesuai bidang yang ingin dipelajari.</p>
-        </div>
+    <p>Pilih mentor sesuai bidang yang ingin dipelajari.</p>
+  </div>
 
-        <div class="cd-mentor-grid">
-          <div class="cd-mentor-card">
-            <div class="cd-mentor-avatar">FA</div>
-            <h3>Fajar Aditya</h3>
-            <span>Frontend Mentor</span>
-            <p>React, UI, JavaScript dan portfolio.</p>
-          </div>
+  <div class="cd-mentor-grid">
 
-          <div class="cd-mentor-card">
-            <div class="cd-mentor-avatar">NR</div>
-            <h3>Nadia Rahma</h3>
-            <span>Data Mentor</span>
-            <p>SQL, Python, dashboard dan data analysis.</p>
-          </div>
+    <div class="cd-mentor-card" data-mentor="Fajar Aditya">
+      <div class="cd-mentor-avatar">FA</div>
 
-          <div class="cd-mentor-card">
-            <div class="cd-mentor-avatar">RS</div>
-            <h3>Rizky Saputra</h3>
-            <span>Cyber Mentor</span>
-            <p>Linux, networking dan web security.</p>
-          </div>
+      <h3>Fajar Aditya</h3>
 
-          <div class="cd-mentor-card">
-            <div class="cd-mentor-avatar">AP</div>
-            <h3>Andi Prakoso</h3>
-            <span>DevOps Mentor</span>
-            <p>Docker, deployment dan workflow modern.</p>
-          </div>
-        </div>
-      </section>
+      <span>Frontend Mentor</span>
+
+      <p>React, UI, JavaScript dan portfolio.</p>
+
+      <div class="mentor-rating"></div>
+
+      <button class="rate-btn">
+        Nilai Mentor
+      </button>
+    </div>
+
+    <div class="cd-mentor-card" data-mentor="Nadia Rahma">
+      <div class="cd-mentor-avatar">NR</div>
+
+      <h3>Nadia Rahma</h3>
+
+      <span>Data Mentor</span>
+
+      <p>SQL, Python, dashboard dan data analysis.</p>
+
+      <div class="mentor-rating"></div>
+
+      <button class="rate-btn">
+        Nilai Mentor
+      </button>
+    </div>
+
+    <div class="cd-mentor-card" data-mentor="Rizky Saputra">
+      <div class="cd-mentor-avatar">RS</div>
+
+      <h3>Rizky Saputra</h3>
+
+      <span>Cyber Mentor</span>
+
+      <p>Linux, networking dan web security.</p>
+
+      <div class="mentor-rating"></div>
+
+      <button class="rate-btn">
+        Nilai Mentor
+      </button>
+    </div>
+
+    <div class="cd-mentor-card" data-mentor="Andi Prakoso">
+      <div class="cd-mentor-avatar">AP</div>
+
+      <h3>Andi Prakoso</h3>
+
+      <span>DevOps Mentor</span>
+
+      <p>Docker, deployment dan workflow modern.</p>
+
+      <div class="mentor-rating"></div>
+
+      <button class="rate-btn">
+        Nilai Mentor
+      </button>
+    </div>
+
+  </div>
+</section>
 
       <!-- CTA -->
       <section class="cd-mentor-cta">
@@ -133,8 +171,207 @@
 
       <!-- Footer -->
       <footer class="cd-footer">
-        <div class="cd-footer-bottom">© 2026 Codery. All rights reserved.</div>
-      </footer>
+      <div class="cd-footer-top">
+        <div class="cd-footer-brand">
+          <h3>Codery</h3>
+          <p>
+            Platform belajar berbasis project yang membantu learner membangun
+            skill, portfolio, dan karier teknologi.
+          </p>
+        </div>
+        <div class="cd-footer-links">
+          <h4>Menu</h4>
+          <a href="beranda.html">Beranda</a>
+          <a href="courses.html">Kelas</a>
+          <a href="learning-path.html">Learning Path</a>
+          <a href="mentors.html">Mentor</a>
+        </div>
+        <div class="cd-footer-links">
+          <h4>Program</h4>
+          <a href="#">Frontend</a>
+          <a href="#">Data Analyst</a>
+          <a href="#">Cyber Security</a>
+        </div>
+        <div class="cd-footer-links">
+          <h4>Kontak</h4>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Email</a>
+        </div>
+      </div>
+      <div class="cd-footer-bottom">© 2026 Codery. All rights reserved.</div>
+    </footer>
     </main>
+    <script src="../js/auth.js"></script>
+    <script>
+
+const user =
+JSON.parse(
+localStorage.getItem(
+"coderyLoggedInUser"
+)
+);
+
+document
+.querySelectorAll(
+".cd-mentor-card"
+)
+.forEach(
+(card)=>{
+
+const mentor =
+card.dataset.mentor;
+
+const ratingBox =
+card.querySelector(
+".mentor-rating"
+);
+
+const button =
+card.querySelector(
+".rate-btn"
+);
+
+if(!user){
+
+button.style.display =
+"none";
+
+}
+
+render();
+
+function render(){
+
+if(!user){
+
+ratingBox.innerHTML = "";
+
+button.style.display =
+"none";
+
+return;
+
+}
+
+button.style.display =
+"block";
+
+const reviews =
+JSON.parse(
+localStorage.getItem(
+"mentorReviews"
+)
+)||[];
+
+const list =
+reviews.filter(
+x=>
+x.mentor===
+mentor
+);
+
+if(
+list.length===0
+){
+
+ratingBox.innerHTML =
+"Belum ada penilaian";
+
+return;
+
+}
+
+ratingBox.innerHTML =
+list
+.map(
+r=>
+`
+<div class="review-item">
+
+<div>
+${"⭐".repeat(
+r.rating
+)}
+</div>
+
+<div>
+${r.comment}
+</div>
+
+</div>
+`
+)
+.join("");
+
+}
+
+button.onclick =
+()=>{
+
+const rating =
+prompt(
+"Masukkan rating 1-5"
+);
+
+if(
+!rating
+){
+
+return;
+
+}
+
+const comment =
+prompt(
+"Tulis komentar"
+);
+
+if(
+!comment
+){
+
+return;
+
+}
+
+const data =
+JSON.parse(
+localStorage.getItem(
+"mentorReviews"
+)
+)||[];
+
+data.push({
+
+mentor,
+
+rating:
+Number(
+rating
+),
+
+comment
+
+});
+
+localStorage.setItem(
+
+"mentorReviews",
+
+JSON.stringify(
+data)
+
+);
+
+render();
+
+};
+
+}
+
+);
+
+</script>
   </body>
 </html>

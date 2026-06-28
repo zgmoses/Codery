@@ -45,19 +45,46 @@
       </section>
 
       <!-- Filter Path -->
-      <section class="cd-lp-filter" id="lpFilter">
-        <button class="cd-lp-chip active" data-filter="semua">Semua</button>
-        <button class="cd-lp-chip" data-filter="Frontend">💻 Frontend</button>
-        <button class="cd-lp-chip" data-filter="Data">📊 Data</button>
-        <button class="cd-lp-chip" data-filter="Cyber">🛡️ Cyber</button>
-        <button class="cd-lp-chip" data-filter="AI">🤖 AI</button>
-        <button class="cd-lp-chip" data-filter="DevOps">⚙️ DevOps</button>
-      </section>
+        <section class="cd-lp-filter" id="lpFilter">
+          <button
+             class="cd-lp-chip active"
+             data-filter="semua">Semua
+          </button>
+
+          <button
+            class="cd-lp-chip"
+            data-filter="frontend">💻 Frontend
+          </button>
+
+          <button
+            class="cd-lp-chip"
+            data-filter="data">
+            📊 Data
+          </button>
+
+          <button
+            class="cd-lp-chip"
+            data-filter="cyber">
+            🛡️ Cyber
+          </button>
+
+          <button
+            class="cd-lp-chip"
+            data-filter="ai" >
+            🤖 AI
+          </button>
+
+          <button
+            class="cd-lp-chip"
+           data-filter="devops">
+            ⚙️ DevOps
+          </button>
+</section>
 
       <!-- Grid Path -->
       <section class="cd-lp-grid" id="lpGrid">
         <!-- Path 1 -->
-        <div class="cd-lp-card" data-category="Frontend">
+        <div class="cd-lp-card" data-category="frontend">
           <div class="cd-lp-card-top">
             <div class="cd-lp-icon">💻</div>
             <div>
@@ -77,10 +104,11 @@
             <span>⏳ 12 Minggu</span>
             <span>📊 850+ Learner</span>
           </div>
-          <a href="#" class="cd-lp-btn">Lihat Detail →</a>
+          
+          <a href="learning-path-detail.html?path=frontend"class="cd-lp-btn">Lihat Detail →</a>
         </div>
         <!-- Path 2 -->
-        <div class="cd-lp-card" data-category="Data">
+        <div class="cd-lp-card" data-category="data">
           <div class="cd-lp-card-top">
             <div class="cd-lp-icon">📊</div>
             <div>
@@ -103,10 +131,11 @@
             <span>⏳ 10 Minggu</span>
             <span>📊 720+ Learner</span>
           </div>
-          <a href="#" class="cd-lp-btn">Lihat Detail →</a>
+          <a href="learning-path-detail.html?path=data"class="cd-lp-btn">
+            Lihat Detail →</a>
         </div>
         <!-- Path 3 -->
-        <div class="cd-lp-card" data-category="Cyber">
+        <div class="cd-lp-card" data-category="cyber">
           <div class="cd-lp-card-top">
             <div class="cd-lp-icon">🛡️</div>
             <div>
@@ -129,10 +158,11 @@
             <span>⏳ 14 Minggu</span>
             <span>📊 410+ Learner</span>
           </div>
-          <a href="#" class="cd-lp-btn">Lihat Detail →</a>
+          <a href="learning-path-detail.html?path=cyber"class="cd-lp-btn">
+            Lihat Detail →</a>
         </div>
         <!-- Path 4 -->
-        <div class="cd-lp-card" data-category="AI">
+        <div class="cd-lp-card" data-category="ai">
           <div class="cd-lp-card-top">
             <div class="cd-lp-icon">🤖</div>
             <div>
@@ -152,10 +182,11 @@
             <span>⏳ 16 Minggu</span>
             <span>📊 500+ Learner</span>
           </div>
-          <a href="#" class="cd-lp-btn">Lihat Detail →</a>
+          <a href="learning-path-detail.html?path=ai"class="cd-lp-btn">
+            Lihat Detail →</a>
         </div>
         <!-- Path 5 -->
-        <div class="cd-lp-card" data-category="DevOps">
+        <div class="cd-lp-card" data-category="devops">
           <div class="cd-lp-card-top">
             <div class="cd-lp-icon">⚙️</div>
             <div>
@@ -175,7 +206,8 @@
             <span>⏳ 12 Minggu</span>
             <span>📊 320+ Learner</span>
           </div>
-          <a href="#" class="cd-lp-btn">Lihat Detail →</a>
+          <a href="learning-path-detail.html?path=devops"class="cd-lp-btn">
+            Lihat Detail →</a>
         </div>
       </section>
 
@@ -236,7 +268,51 @@
       </div>
       <div class="cd-footer-bottom">© 2026 Codery. All rights reserved.</div>
     </footer>
+    <script src="../js/auth.js"></script>
+    <script>
+const buttons =
+  document.querySelectorAll(".cd-lp-chip");
 
-    <script src="../js/script.js"></script>
+const cards =
+  document.querySelectorAll(".cd-lp-card");
+
+const empty =
+  document.getElementById("lpEmpty");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+
+    buttons.forEach((btn) =>
+      btn.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+    const filter =
+      button.dataset.filter;
+
+    let total = 0;
+
+    cards.forEach((card) => {
+
+      if (
+        filter === "semua" ||
+        card.dataset.category === filter
+      ) {
+        card.style.display = "block";
+        total++;
+      } else {
+        card.style.display = "none";
+      }
+
+    });
+
+    empty.style.display =
+      total === 0
+        ? "block"
+        : "none";
+  });
+});
+</script>
   </body>
 </html>
