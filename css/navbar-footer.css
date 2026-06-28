@@ -43,13 +43,23 @@
 }
 
 .cd-nav-menu {
+  flex: 1;
+
   display: flex;
-  gap: 34px;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
 }
 
-.cd-nav-menu {
+.cd-nav-actions {
+  min-width: 180px;
+
   display: flex;
-  gap: 12px;
+
+  justify-content: flex-end;
 }
 
 .cd-nav-menu a {
@@ -259,4 +269,44 @@
   .cd-footer-top {
     grid-template-columns: 1fr;
   }
+}
+
+.cd-user-menu {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.cd-user-email {
+  font-weight: 700;
+
+  color: var(--text);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.cd-logout-btn {
+  border: none;
+
+  padding: 12px 18px;
+
+  border-radius: 12px;
+
+  background: #ef4444;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: 700;
+}
+
+.cd-logout-btn:hover {
+  opacity: 0.9;
 }

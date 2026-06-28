@@ -120,3 +120,86 @@ if (loginForm) {
     window.location.href = "beranda.html";
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const navActions = document.getElementById("navActions");
+
+  if (!navActions) return;
+
+  const loggedUser = JSON.parse(
+    localStorage.getItem("coderyLoggedInUser"),
+  );
+
+  if (loggedUser) {
+    navActions.innerHTML = `
+      <div class="cd-user-menu">
+        <span class="cd-user-email">
+          👤 ${loggedUser.email}
+        </span>
+
+        <button id="logoutBtn" class="cd-logout-btn">
+          Logout
+        </button>
+      </div>
+    `;
+    // sembunyikan hero mentor jika sudah login
+  const mentorHero =
+    document.getElementById(
+      "mentorHero",
+    );
+
+  if (mentorHero) {
+      mentorHero.style.display =
+      "none";
+  }
+  const mentorCta =
+  document.querySelector(
+    ".cd-mentor-cta",
+  );
+
+  if (mentorCta) {
+    mentorCta.style.display =
+    "none";
+}
+    //sembunyaikan CTA jika sudah login
+const newsletter =
+  document.getElementById(
+    "newsletterSection",
+  );
+
+const finalCta =
+  document.querySelector(
+    ".cd-final-cta",
+  );
+
+if (newsletter) {
+  newsletter.style.display =
+    "none";
+}
+
+if (finalCta) {
+  finalCta.style.display =
+    "none";
+}
+ const logoutBtn =
+  document.getElementById(
+    "logoutBtn",
+  );
+
+if (logoutBtn) {
+  logoutBtn.addEventListener(
+    "click",
+    () => {
+      localStorage.removeItem(
+        "coderyLoggedInUser",
+      );
+
+      alert(
+        "Logout berhasil",
+      );
+
+      window.location.href =
+        "beranda.html";
+    },
+  );
+}}
+});
